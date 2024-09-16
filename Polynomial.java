@@ -1,14 +1,14 @@
 class Polynomial{
 	public double[] p;
-	
+
 	public Polynomial(){
 		p = new double[]{0};
 	}
-	
+
 	public Polynomial(double[] polynomial){
 		p = polynomial;
 	}
-	
+
 	public Polynomial add(Polynomial polynomial){
 		double[] temp;
 		if(polynomial.p.length > p.length){
