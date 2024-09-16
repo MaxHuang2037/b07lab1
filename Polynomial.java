@@ -1,30 +1,30 @@
 class Polynomial{
 	public double[] p;
-
+	
 	public Polynomial(){
 		p = new double[]{0};
 	}
-
+	
 	public Polynomial(double[] polynomial){
 		p = polynomial;
 	}
-
+	
 	public Polynomial add(Polynomial polynomial){
-        double[] temp;
+		double[] temp;
 		if(polynomial.p.length > p.length){
-            temp = polynomial.p.clone();
-            for(int i = 0; i < p.length; i++){
-                temp[i] += p[i];
-            }
-        }
-        else{
-            temp = p.clone();
-            for(int i = 0; i < polynomial.p.length; i++){
-                temp[i] += polynomial.p[i];
-            }
-        }
-        
-        return new Polynomial(temp);
+			temp = polynomial.p.clone();
+			for(int i = 0; i < p.length; i++){
+				temp[i] += p[i];
+		    }
+		}
+		else{
+		    temp = p.clone();
+		    for(int i = 0; i < polynomial.p.length; i++){
+				temp[i] += polynomial.p[i];
+		    }
+		}
+		
+		return new Polynomial(temp);
 	}
 
     public double evaluate(double x){
